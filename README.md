@@ -42,7 +42,7 @@ curl -X POST http://localhost:3000/decks?cards=AH,2S,KD
 {
   "deck_id": "cc7f842d-50cf-4269-80d7-fb20553593c3",
   "shuffled": false,
-  "remaining": 52
+  "remaining": 3
 }
 ```
 
@@ -50,18 +50,18 @@ Retrieve a deck (see [here](./pkg/models/models.go) for expected card values):
 ```console
 curl -X GET http://localhost:3000/decks/{id}
 ```
-```json
+```jsonc
 {
-  "deck_id": "75b3479e-403f-45f1-bba4-ebbe090818b4",
+  "deck_id": "cc7f842d-50cf-4269-80d7-fb20553593c3",
   "shuffled": true,
-  "remaining": 4,`
+  "remaining": 3,
   "cards": [
     {
       "code": "AS",
       "value": "ACE",
       "suit": "SPADES"
     },
-    ...
+    // ...
   ]
 }
 ```
